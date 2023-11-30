@@ -1,23 +1,43 @@
-import logo from './logo.svg';
+import logoerick from './imagenes/Erick Acosta (1).png'
 import './App.css';
+import Boton from './components/boton';
+import Contador from './components/contador';
 
 function App() {
+
+  const manejarClic = () => {
+
+  }
+
+  const reiniciarContador = () =>{
+
+  }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='logo-contenedor'>
+        <img
+          className='logo-inicial'
+          src={logoerick}
+          alt='logo principal'          />
+        
+      </div>
+      <div className='contenedor-principal'>
+
+          <Contador/>
+          <Boton
+            texto='Clic'
+            esBotonDeClic={true}
+            manejarClic={manejarClic}          />
+          <Boton
+            texto='Reiniciar'
+            esBotonDeClic={false}
+            manejarClic={reiniciarContador}
+          />
+
+      </div>
+
     </div>
   );
 }
