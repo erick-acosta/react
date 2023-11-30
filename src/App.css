@@ -7,6 +7,7 @@
 html,
 body {
   background-color: #333333;
+  background: linear-gradient(145deg, rgba(80,80,80,1) 30%, rgba(10,10,10,1) 66%, rgba(79,177,198,1) 79%);
 }
 
 .App{
@@ -27,7 +28,8 @@ body {
 }
 
 .logo-inicial{
-  height: 125px;
+  height: 150px;
+  border-radius: 10px;
 }
 
 .contenedor-principal{
@@ -40,3 +42,14 @@ body {
   justify-content: center;
 
 }
+
+@media (min-width: 950px){
+
+  .horizontal-padding{
+      padding-left: 70px;
+      padding-right: 70px;
+      } 
+      .vertical-padding{
+          padding-top: 70px;
+      padding-bottom: 70px;
+}}

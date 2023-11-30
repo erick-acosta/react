@@ -2,15 +2,18 @@ import logoerick from './imagenes/Erick Acosta (1).png'
 import './App.css';
 import Boton from './components/boton';
 import Contador from './components/contador';
+import { useState } from 'react';
 
 function App() {
 
-  const manejarClic = () => {
+  const [numClics, setNumClics] = useState(0);
 
+  const manejarClic = () => {
+    setNumClics(numClics + 1);
   }
 
   const reiniciarContador = () =>{
-
+    setNumClics(0);
   }
 
 
@@ -25,7 +28,7 @@ function App() {
       </div>
       <div className='contenedor-principal'>
 
-          <Contador/>
+          <Contador numClics={numClics}/>
           <Boton
             texto='Clic'
             esBotonDeClic={true}
